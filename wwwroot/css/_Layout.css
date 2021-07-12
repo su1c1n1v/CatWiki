@@ -1,0 +1,42 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    font-family: Montserrat;
+}
+.header{
+    width:100%;
+    height:3rem;
+}
+.header-title{
+    height:100%;
+    width:10rem;
+    align-items:center;
+    display:flex;
+    justify-content:space-around;
+}
+.title{
+    margin:auto;
+}
+footer {
+    width: 95%;
+    height: 3.7rem;
+    background-color: black;
+    margin: auto;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    position: fixed;
+    left: 2.5%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.img-footer{
+    width:10rem;
+    margin-left:4rem;
+}
+.text-footer {
+    margin-right: 4rem;
+}
