@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
     <link href="~/css/_Layout.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/index.css" rel="stylesheet" asp-append-version="true" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
@@ -15,13 +16,15 @@
             <img src="~/img/CatwikiLogo.svg" class="title" alt="Logo" />
         </div>
     </div>
-    @RenderBody()
+    <main>
+        @RenderBody()
+    </main>
 <footer>
     <div class="header-title">
         <img src="~/img/logocat.png" class="img-footer" alt="Logo" />
     </div>
     <div class="text-footer">
-        <h3>© created by <a href="https://github.com/ved-suiciniv">ved-suiciniv</a> - devChallenge.io 2021</h3>
+        <h3>© created by <a href="https://github.com/ved-suiciniv" style="text-decoration:none;">ved-suiciniv</a> - devChallenge.io 2021</h3>
     </div>
 </footer>
 </body>

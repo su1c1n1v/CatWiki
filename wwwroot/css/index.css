@@ -1,0 +1,43 @@
+﻿.body {
+    width: 60%;
+    height: 35rem;
+    background-color: black;
+    border-radius: 2rem;
+    margin: auto;
+    margin-top: 2rem;
+}
+.main{
+    height:50%;
+    width:100%;
+    display:flex;
+    align-items:center;
+}
+.img-cat {
+    height: 100%;
+    width:60%;
+    border-top-right-radius:2rem;
+}
+.main-text{
+    height:100%;
+    width:50%;
+}
+.baner-content {
+    background-color: #E3E1DC;
+    height: 50%;
+    width: 100%;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+.main-text-text{
+    width:70%;
+    height:100%;
+    margin:auto;
+}
+.img-logo-cat{
+    width:16rem;
+    margin:auto;
+}
+.img-logo-text{
+    color:white;
+    font-size:1.0rem;
+}
