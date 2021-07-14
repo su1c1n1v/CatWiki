@@ -14,10 +14,7 @@
 }
 .header-title{
     height:100%;
-    width:10rem;
-    align-items:center;
-    display:flex;
-    justify-content:space-around;
+    width:50%;
 }
 .title{
     margin:auto;
@@ -30,14 +27,65 @@ footer {
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
     display: flex;
+    align-items:center;
     color: white;
+    justify-content:space-between;
 }
 .img-footer{
     width:10rem;
     margin-left:4rem;
 }
-.text-footer {
-    margin-right: 4rem;
+.text-footer{
+    width:50%;
+    height:100%;
 }
-main{
+/* Responsible ========================== */
+@media only screen and (max-width: 1000px) {
+    footer {
+        width: 90%;
+        font-size:0.8rem;
+    }
+    .text-footer {
+        width: 60%;
+        height: 100%;
+        display:flex;
+        align-items:center;
+    }
+    .header-title {
+        width: 10%;
+    }
+    .header {
+        width: 90%;
+    }
+    .img-footer {
+        width: 8rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        width: 90%;
+        font-size: 0.5rem;
+    }
+
+    .text-footer {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .header-title {
+        width: 30%;
+        display: flex;
+        align-items: center;
+    }
+
+    .header {
+        width: 90%;
+    }
+
+    .img-footer {
+        width: 100%;
+    }
 }

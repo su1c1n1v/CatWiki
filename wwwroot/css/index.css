@@ -6,17 +6,21 @@
     margin-bottom: 1rem;
 }
 .main {
-    height: 50%;
+    height: 17rem;
     width: 100%;
     background-color: black;
     display: flex;
-    border-radius: 2rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
     align-items: center;
 }
 .img-cat {
     height: 100%;
-    width:60%;
-    border-top-right-radius:2rem;
+    width: 50%;
+    border-top-right-radius: 2rem;
+    background-image: url("/img/HeroImagelg.png");
+    background-size:cover;
+    background-position-x:right;
 }
 .main-text{
     height:100%;
@@ -35,13 +39,23 @@
     height:100%;
     margin:auto;
 }
-.img-logo-cat{
-    width:16rem;
-    margin:auto;
+.img-logo-container {
+    width: 50%;
+    margin: auto;
 }
-.img-logo-text{
-    color:white;
-    font-size:1.0rem;
+.img-logo-cat {
+    width: 16rem;
+    margin: auto;
+    object-fit: cover;
+}
+.img-logo-text {
+    width: 70%;
+    height: 2rem;
+    color: white;
+    font-size: 1.0rem;
+    padding: 0;
+    margin: auto;
+    margin-bottom: 2rem;
 }
 .search-input {
     width: 90%;
@@ -50,13 +64,14 @@
     border-radius: 1.6rem;
 }
 .search{
-    width:80%;
-    height:2.5rem;
+    width:70%;
+    height:2.3rem;
     display:flex;
     align-items:center;
     border:0.3rem solid white;
     border-radius:1.6rem;
     background-color:white;
+    margin:auto;
 }
 .img-button{
     border:none;
@@ -109,7 +124,7 @@
     justify-content: space-between;
 }
 .baner-content-title-inside{
-    width:30%;
+    width:34%;
     height:100%;
 }
 .baner-content-link {
@@ -148,7 +163,6 @@
     margin:auto;
     border-radius:1rem;
     object-fit: cover;
-    object-position: bottom;
 }
 .grid-img {
     width: 100%;
@@ -165,6 +179,7 @@
 }
 
 /* Baner 2 =============================== */
+
 .baner-have-cat{
     height:auto;
     width:100%;
@@ -174,5 +189,89 @@
 .baner-have-cat-text{
     width:50%;
     background-color:lightcoral;
-    height:30rem;
+    height:25rem;
+}
+
+
+
+
+/* Responsible ========================== */
+
+@media only screen and (max-width: 1000px) {
+    .galery {
+        height: 75%;
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 50% 50%;
+    }
+    .baner-content-title-inside {
+        font-size:larger;
+    }
+    .grid {
+        width: 100%;
+        margin: auto;
+        height: 80%;
+    }
+    .body {
+        width: 90%;
+    }
+    .img-cat {
+        background-image: url("/img/HeroImagesm.png");
+    }
+    .search {
+        width: 100%;
+        height: 2.1rem;
+    }
+    .img-logo-text {
+        width: 90%;
+    }
+    .img-logo-cat {
+        width: 14rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .galery {
+        height: 75%;
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 50% 50%;
+    }
+
+    .baner-content-title-inside {
+        font-size: small;
+        width:50%;
+    }
+
+    .grid {
+        width: 100%;
+        margin: auto;
+        height: 80%;
+    }
+
+    .body {
+        width: 90%;
+    }
+
+    .img-cat {
+        background-image: url("/img/HeroImagesm.png");
+    }
+
+    .search {
+        width: 100%;
+        height: 1rem;
+    }
+
+    .img-logo-text {
+        width: 100%;
+        font-size:0.5rem;
+        padding:0;
+        margin:0;
+    }
+
+    .img-logo-cat {
+        width: 7.5rem;
+        margin-top: 0.6rem;
+    }
+    .main {
+        height: 10rem;
+    }
 }
