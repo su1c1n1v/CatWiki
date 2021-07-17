@@ -183,22 +183,81 @@
 .baner-have-cat{
     height:auto;
     width:100%;
-    background-color:crimson;
     display:flex;
+    margin-bottom:2rem;
+    margin-top:2rem;
 }
 .baner-have-cat-text{
     width:50%;
-    background-color:lightcoral;
     height:25rem;
+    display:flex;
+    align-items:center;
+}
+.baner-have-text{
+    width:50%;
+    height:25rem;
+    display:flex;
+}
+.img1{
+    width:50%;
+    height:100%;
 }
 
+    .img1 + img {
+        height:80%;
+    }
 
+.img2{
+    width:90%;
+    float:right;
+}
+.img3{
+    width:55%;
+    margin:auto;
+    float:right;
+}
 
+.baner-cat-text {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
 
-/* Responsible ========================== */
-
-@media only screen and (max-width: 1000px) {
-    .galery {
+.baner-cat-text1 {
+    width: 90%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    font-family: Montserrat;
+    font-weight: bold;
+    margin: auto;
+}
+    .baner-cat-text1 h1 {
+        font-weight: bold;
+        margin:auto;
+        padding:0;
+    }
+    .baner-cat-text1 h4 {
+        padding:0;
+        margin:auto;
+    }
+.baner-cat-text2 {
+    width: 90%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    font-family: Montserrat;
+    font-weight: bold;
+    margin: auto;
+}
+    .baner-cat-text2 a {
+        color: #291507;
+        border:none;
+        text-decoration:none;
+    }
+    /* Responsible ========================== */
+    @media only screen and (max-width: 1000px) {
+        .galery {
         height: 75%;
         grid-template-columns: 40% 40%;
         grid-template-rows: 50% 50%;
@@ -227,6 +286,19 @@
     .img-logo-cat {
         width: 14rem;
     }
+        .img1 + img {
+            height: 17rem;
+        }
+
+        .img2 {
+            width: 12rem;
+            float: right;
+        }
+
+        .img3 {
+            width: 9rem;
+            margin: auto;
+        }
 }
 
 @media only screen and (max-width: 600px) {
@@ -238,7 +310,7 @@
 
     .baner-content-title-inside {
         font-size: small;
-        width:50%;
+        width: 50%;
     }
 
     .grid {
@@ -262,16 +334,32 @@
 
     .img-logo-text {
         width: 100%;
-        font-size:0.5rem;
-        padding:0;
-        margin:0;
+        font-size: 0.5rem;
+        padding: 0;
+        margin: 0;
     }
 
     .img-logo-cat {
         width: 7.5rem;
         margin-top: 0.6rem;
     }
+
     .main {
         height: 10rem;
     }
+
+    .baner-have-cat {
+        display: block;
+    }
+
+    .baner-have-cat-text {
+        width: 90%;
+        margin: auto;
+    }
+
+    .baner-have-text {
+        width: 90%;
+        margin: auto;
+    }
+
 }
