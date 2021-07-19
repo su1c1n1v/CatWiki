@@ -12,9 +12,12 @@
 </head>
 <body>
     <div class="header">
-        <div class="header-title">
-            <img src="~/img/CatwikiLogo.svg" class="title" alt="Logo" />
-        </div>
+        @using (Html.BeginForm("Index", "Home", FormMethod.Get, new { @class = "header-title" }))
+        {
+            <button type="submit" style="border: none; background-color: white;">
+                <img src="~/img/CatwikiLogo.svg" class="title" alt="Logo" />
+            </button>
+        }
     </div>
     @RenderBody()
     <footer>

@@ -1,3 +1,5 @@
+using CatWiki.Data;
+using CatWiki.Data.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +28,8 @@ namespace CatWiki
             
             // New
             services.AddHttpClient();
+            services.AddScoped<IImageRepository, ImageRepository>();
+            services.AddScoped<ICatsRepository, CatsRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

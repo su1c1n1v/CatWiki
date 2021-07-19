@@ -35,9 +35,9 @@
         <div class="galery">
             @foreach (Cats item in Model)
             {
-                @using (Html.BeginForm("CatPage", "Home ", FormMethod.Get))
+                @using (Html.BeginForm("CatPage", "Home", FormMethod.Get, new { @class = "form"}))
                 {
-                    <button type="submit" class="grid" style="border:none;">
+                    <button type="submit" class="grid" style="border: none; background-color: #E3E1DC;">
                         <div class="grid-img">
                             <img src="@item.image.url" class="img-cats" alt="@item.name" />
                         </div>

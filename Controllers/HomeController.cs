@@ -1,4 +1,5 @@
-﻿using CatWiki.Models;
+﻿using CatWiki.Data;
+using CatWiki.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -16,32 +17,20 @@ namespace CatWiki.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IHttpClientFactory _clientFactory;
+        private readonly ICatsRepository _catRepository;
 
-        public HomeController(ILogger<HomeController> logger, IHttpClientFactory clientFactory)
+        public HomeController(ILogger<HomeController> logger, IHttpClientFactory clientFactory, ICatsRepository catRepository)
         {
             _logger = logger;
             _clientFactory = clientFactory;
+            _catRepository = catRepository;
         }
 
         public async Task<IActionResult> Index()
         {
             List<Cats> cats;
-            string getBreeds;
-            string errorString;
-
-            getBreeds = "https://api.thecatapi.com/v1/breeds?limit=4&page=4";
-            var request = new HttpRequestMessage(HttpMethod.Get, getBreeds);
-            errorString = "Error to call " + getBreeds;
-
-            var Client = _clientFactory.CreateClient();
-
-            HttpResponseMessage response = await Client.SendAsync(request);
-            if (response.IsSuccessStatusCode)
-            {
-                cats = await response.Content.ReadFromJsonAsync<List<Cats>>();
-                return View(cats);
-            }
-            return View();
+            cats = await _catRepository.GetAllCats();
+            return View(cats);
         }
 
         public async Task<IActionResult>  Breeds()

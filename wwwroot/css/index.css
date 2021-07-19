@@ -91,13 +91,18 @@
 .button::selection{
     background-color:lightgray;
 }
+.form {
+    border: none;
+    background-color: #E3E1DC;
+}
 
-.baner-title{
-    width:90%;
-    height:5rem;
-    margin:auto;
-    display:flex;
-    align-items:center;
+
+.baner-title {
+    width: 90%;
+    height: 5rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
 }
 .baner-title-text {
     padding: 0;
