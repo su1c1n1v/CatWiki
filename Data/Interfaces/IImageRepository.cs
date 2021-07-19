@@ -8,7 +8,6 @@ namespace CatWiki.Data
 {
     public interface IImageRepository
     {
-        Image GetImageById(string id);
-
+        Task<List<Image>> GetImageById(string id);
     }
 }

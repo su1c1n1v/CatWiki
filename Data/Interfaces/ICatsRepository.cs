@@ -10,6 +10,8 @@ namespace CatWiki.Data
     {
         Task<List<Cats>> GetCatByName(string name);
 
+        Task<List<Cats>> GetQuantityOfCats(int quantity);
+
         Task<List<Cats>> GetAllCats();
 
         Task<List<Cats>> GetCatById(string id);
