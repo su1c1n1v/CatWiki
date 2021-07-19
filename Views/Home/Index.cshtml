@@ -29,34 +29,23 @@
         <div class="baner-content-title">
             <h1 class="baner-content-title-inside">66+ Breeds For you to discover</h1>
             <div class="baner-content-link">
-                <a href="~/home" style="color: #291507;font-weight:bold;">SEE MORE</a>
+                <a href="~/home/Breeds" style="color: #291507;font-weight:bold;">SEE MORE</a>
             </div>
         </div>
         <div class="galery">
-            <div class="grid">
-                <div class="grid-img">
-                    <img src="~/img/cat1.png" class="img-cats" alt="Cat 1" />
-                </div>
-                <p class="classification">Bengala</p>
-            </div>
-            <div class="grid">
-                <div class="grid-img">
-                    <img src="~/img/cat1.png" class="img-cats" alt="Cat 1" />
-                </div>
-                <p class="classification">Bengala</p>
-            </div>
-            <div class="grid">
-                <div class="grid-img">
-                    <img src="~/img/cat1.png" class="img-cats" alt="Cat 1" />
-                </div>
-                <p class="classification">Bengala</p>
-            </div>
-            <div class="grid">
-                <div class="grid-img">
-                    <img src="~/img/cat1.png" class="img-cats" alt="Cat 1" />
-                </div>
-                <p class="classification">Bengala</p>
-            </div>
+            @foreach (Cats item in Model)
+            {
+                @using (Html.BeginForm("CatPage", "Home ", FormMethod.Get))
+                {
+                    <button type="submit" class="grid" style="border:none;">
+                        <div class="grid-img">
+                            <img src="@item.image.url" class="img-cats" alt="@item.name" />
+                        </div>
+                        <p class="classification">@item.name</p>
+                    </button>
+                    <input type="hidden" name="name" id="name" value="@item.name" />
+                }
+            }
         </div>
     </div>
     <div class="baner-have-cat">

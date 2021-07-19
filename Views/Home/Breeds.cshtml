@@ -1,0 +1,19 @@
+﻿@model List<Cats>
+
+@foreach (Cats item in Model)
+{
+    <br />
+    <h1>@item.name</h1>
+    <h1>@item.origin</h1>
+    <h1>@item.natural</h1>
+    <h1>@item.weight.imperial</h1>
+    @if (item.image != null)
+    {   
+        <img src="@item.image.url" alt="@item.name" />
+    }
+    else
+    {
+
+    }
+    <br />
+}
