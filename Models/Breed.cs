@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace CatWiki.Models
+﻿namespace CatWiki.Models
 {
-    public class Cats
+    public class Breed
     {
         public Weight weight { get; set; }
         public string id { get; set; }
         public string name { get; set; }
         public string cfa_url { get; set; }
         public string vetstreet_url { get; set; }
-        public string vcahospitals_url { get; set; }
         public string temperament { get; set; }
         public string origin { get; set; }
         public string country_codes { get; set; }
@@ -44,8 +38,7 @@ namespace CatWiki.Models
         public string wikipedia_url { get; set; }
         public int hypoallergenic { get; set; }
         public string reference_image_id { get; set; }
-        public Image image { get; set; }
-
     }
+
 
 }

@@ -18,12 +18,14 @@ namespace CatWiki.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IHttpClientFactory _clientFactory;
         private readonly ICatsRepository _catRepository;
+        private readonly IImageRepository _imageRepository;
 
-        public HomeController(ILogger<HomeController> logger, IHttpClientFactory clientFactory, ICatsRepository catRepository)
+        public HomeController(ILogger<HomeController> logger, IHttpClientFactory clientFactory, ICatsRepository catRepository, IImageRepository imageRepository)
         {
             _logger = logger;
             _clientFactory = clientFactory;
             _catRepository = catRepository;
+            _imageRepository = imageRepository;
         }
 
         public async Task<IActionResult> Index()
@@ -43,7 +45,8 @@ namespace CatWiki.Controllers
         {
             List<Cats> cats;
             cats = await _catRepository.GetCatByName(name);
-            return View(cats);
+            ImageViewModel image = await _imageRepository.GetImageById(cats[0].reference_image_id);
+            return View(image);
         }
     }
 }

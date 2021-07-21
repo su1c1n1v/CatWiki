@@ -1,6 +1,144 @@
-﻿@model List<Cats>
+﻿@model ImageViewModel
 
-<div>
-    <h1>@Model[0].name</h1>
-    <h2>@Model[0].origin</h2>
+<div class="cat-page-body">
+    <div class="cat-page-body-img">
+        <img src="@Model.url" alt="@Model.breeds[0].name" />
+    </div>
+    <div class="cat-page-body-content">
+        <div class="cat-page-body-content-inside">
+            <h3>@Model.breeds[0].name</h3>
+            <p><span>@Model.breeds[0].description</span></p>
+            <p><span>Temperament: </span>@Model.breeds[0].temperament</p>
+            <p><span>Origin: </span>@Model.breeds[0].origin</p>
+            <p><span>Life Span: </span>@Model.breeds[0].life_span years</p>
+            <div class="cat-page-body-content-range">
+                <p class="p-attribute"><span>Adaptability: </span></p>
+                <div class="range">
+                    @for (int i = 0; i < Model.breeds[0].adaptability; i++)
+                    {
+                        <div class="black"></div>
+                    }
+                    @if (Model.breeds[0].adaptability < 5)
+                    {
+                        @for (int i = 0; i < 5 - Model.breeds[0].adaptability; i++)
+                        {
+                            <div class="gray"></div>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="cat-page-body-content-range">
+                <p class="p-attribute"><span>Affection level: </span></p>
+                <div class="range">
+                    @for (int i = 0; i < Model.breeds[0].affection_level; i++)
+                    {
+                        <div class="black"></div>
+                    }
+                    @if (Model.breeds[0].affection_level < 5)
+                    {
+                        @for (int i = 0; i < 5 - Model.breeds[0].affection_level; i++)
+                        {
+                            <div class="gray"></div>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="cat-page-body-content-range">
+                <p class="p-attribute"><span>Child Friendly: </span></p>
+                <div class="range">
+                    @for (int i = 0; i < Model.breeds[0].child_friendly; i++)
+                    {
+                        <div class="black"></div>
+                    }
+                    @if (Model.breeds[0].child_friendly < 5)
+                    {
+                        @for (int i = 0; i < 5 - Model.breeds[0].child_friendly; i++)
+                        {
+                            <div class="gray"></div>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="cat-page-body-content-range">
+                <p class="p-attribute"><span>Grooming: </span></p>
+                <div class="range">
+                    @for (int i = 0; i < Model.breeds[0].grooming; i++)
+                    {
+                        <div class="black"></div>
+                    }
+                    @if (Model.breeds[0].grooming < 5)
+                    {
+                        @for (int i = 0; i < 5 - Model.breeds[0].grooming; i++)
+                        {
+                            <div class="gray"></div>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="cat-page-body-content-range">
+                <p class="p-attribute"><span>Intelligence: </span></p>
+                <div class="range">
+                    @for (int i = 0; i < Model.breeds[0].intelligence; i++)
+                    {
+                        <div class="black"></div>
+                    }
+                    @if (Model.breeds[0].intelligence < 5)
+                    {
+                        @for (int i = 0; i < 5 - Model.breeds[0].intelligence; i++)
+                        {
+                            <div class="gray"></div>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="cat-page-body-content-range">
+                <p class="p-attribute"><span>Health issues: </span></p>
+                <div class="range">
+                    @for (int i = 0; i < Model.breeds[0].health_issues; i++)
+                    {
+                        <div class="black"></div>
+                    }
+                    @if (Model.breeds[0].health_issues < 5)
+                    {
+                        @for (int i = 0; i < 5 - Model.breeds[0].health_issues; i++)
+                        {
+                            <div class="gray"></div>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="cat-page-body-content-range">
+                <p class="p-attribute"><span>Social needs: </span></p>
+                <div class="range">
+                    @for (int i = 0; i < Model.breeds[0].social_needs; i++)
+                    {
+                        <div class="black"></div>
+                    }
+                    @if (Model.breeds[0].social_needs < 5)
+                    {
+                        @for (int i = 0; i < 5 - Model.breeds[0].social_needs; i++)
+                        {
+                            <div class="gray"></div>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="cat-page-body-content-range">
+                <p class="p-attribute"><span>Stranger friendly: </span></p>
+                <div class="range">
+                    @for (int i = 0; i < Model.breeds[0].stranger_friendly; i++)
+                    {
+                        <div class="black"></div>
+                    }
+                    @if (Model.breeds[0].stranger_friendly < 5)
+                    {
+                        @for (int i = 0; i < 5 - Model.breeds[0].stranger_friendly; i++)
+                        {
+                            <div class="gray"></div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -13,14 +13,14 @@ namespace CatWiki.Data.Repository
         private readonly IHttpClientFactory _clientFactory;
         private HttpClient _Client;
         private HttpResponseMessage _response;
-        private List<Image> images;
+        private ImageViewModel images;
         private string getImages;
 
         public ImageRepository(IHttpClientFactory clientFactory)
         {
             _clientFactory = clientFactory;
         }
-        public async Task<List<Image>> GetImageById(string id)
+        public async Task<ImageViewModel> GetImageById(string id)
         {
             getImages = "https://api.thecatapi.com/v1/images/"+id;
             var request = new HttpRequestMessage(HttpMethod.Get, getImages);
@@ -33,7 +33,7 @@ namespace CatWiki.Data.Repository
                 return null;
             }
 
-            images = await _response.Content.ReadFromJsonAsync<List<Image>>();
+            images = await _response.Content.ReadFromJsonAsync<ImageViewModel>();
 
             return images;
         }
