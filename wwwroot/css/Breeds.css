@@ -7,17 +7,20 @@
 .body-breeds {
     width: 100%;
     margin: auto;
+    background-color: bisque;
     margin: 2rem 0 2rem 0;
 }
 .body-breeds-content {
     width: 60%;
     height: 14rem;
+    background-color: yellow;
     margin: auto;
     display: flex;
 }
 .body-breeds-content-img{
     width:20%;
     height:100%;
+    background-color:aqua;
     display:flex;
     align-items:center;
 }
@@ -35,6 +38,7 @@
     height:100%;
     display:flex;
     align-items:center;
+    background-color:aliceblue;
 }
 .body-breeds-content-inside div{
     height:80%;
