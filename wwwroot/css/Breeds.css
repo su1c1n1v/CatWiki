@@ -1,1 +1,45 @@
-﻿
+﻿.breeds-title {
+    width: 60%;
+    height: 3rem;
+    font-size: 1.8rem;
+    margin: 1rem auto 1rem auto;
+}
+.body-breeds {
+    width: 100%;
+    margin: auto;
+    margin: 2rem 0 2rem 0;
+}
+.body-breeds-content {
+    width: 60%;
+    height: 14rem;
+    margin: auto;
+    display: flex;
+}
+.body-breeds-content-img{
+    width:20%;
+    height:100%;
+    display:flex;
+    align-items:center;
+}
+
+.body-breeds-content-img img {
+    width: 13rem;
+    height: 13rem;
+    object-fit: cover;
+    border-radius:1rem;
+    border: 0rem solid black;
+    margin:auto;
+}
+.body-breeds-content-inside{
+    width:70%;
+    height:100%;
+    display:flex;
+    align-items:center;
+}
+.body-breeds-content-inside div{
+    height:80%;
+    width:100%;
+}
+.body-breeds-content-inside div h3{
+    font-weight:bolder
+}

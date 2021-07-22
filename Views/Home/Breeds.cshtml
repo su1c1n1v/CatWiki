@@ -1,19 +1,26 @@
 ﻿@model List<Cats>
-
-@foreach (Cats item in Model)
-{
-    <br />
-    <h1>@item.name</h1>
-    <h1>@item.origin</h1>
-    <h1>@item.natural</h1>
-    <h1>@item.weight.imperial</h1>
-    @if (item.image != null)
-    {   
-        <img src="@item.image.url" alt="@item.name" />
-    }
-    else
-    {
-
-    }
-    <br />
+@{
+    int i;
+    i = 1;
+    ViewData["Title"] = "Cat Wiki - Top 10";
 }
+<div class="body-breeds">
+    <h3 class="breeds-title">Top 10 most searched breeds</h3>
+    @foreach (var item in Model)
+    {
+        <div class="body-breeds-content">
+            <div class="body-breeds-content-img">
+                @if (item.image != null)
+                {
+                    <img src="@item.image.url" alt="@item.name" />
+                }
+            </div>
+            <div class="body-breeds-content-inside">
+                <div>
+                    <h3>@(i++). @item.name</h3>
+                    <h5>@item.description</h5>
+                </div>
+            </div>
+        </div>
+    }
+</div>

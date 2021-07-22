@@ -15,15 +15,11 @@ namespace CatWiki.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly IHttpClientFactory _clientFactory;
         private readonly ICatsRepository _catRepository;
         private readonly IImageRepository _imageRepository;
 
-        public HomeController(ILogger<HomeController> logger, IHttpClientFactory clientFactory, ICatsRepository catRepository, IImageRepository imageRepository)
+        public HomeController(ICatsRepository catRepository, IImageRepository imageRepository)
         {
-            _logger = logger;
-            _clientFactory = clientFactory;
             _catRepository = catRepository;
             _imageRepository = imageRepository;
         }
