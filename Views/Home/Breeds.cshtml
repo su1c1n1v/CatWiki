@@ -8,19 +8,43 @@
     <h3 class="breeds-title">Top 10 most searched breeds</h3>
     @foreach (var item in Model)
     {
+        @using (Html.BeginForm("CatPage", "Home", FormMethod.Get, new { @class = "" }))
+        {
+            <button type="submit" class="body-breeds-content">
+                <div class="body-breeds-content-img">
+                    @if (item.image != null)
+                    {
+                        <img src="@item.image.url" alt="@item.name" />
+                    }
+                </div>
+                <div class="body-breeds-content-inside">
+                    <div>
+                        <h3>@(i++). @item.name</h3>
+                        <h5>@item.description</h5>
+                    </div>
+                </div>
+            </button>
+            <input type="hidden" name="name" id="name" value="@item.name" />
+        }
+    }
+</div>
+
+<!--
+    foreach (var item in Model)
+    {
         <div class="body-breeds-content">
             <div class="body-breeds-content-img">
-                @if (item.image != null)
+                if (item.image != null)
                 {
-                    <img src="@item.image.url" alt="@item.name" />
+                    <img src="item.image.url" alt="item.name" />
                 }
             </div>
             <div class="body-breeds-content-inside">
                 <div>
-                    <h3>@(i++). @item.name</h3>
-                    <h5>@item.description</h5>
+                    <h3>(i++). item.name</h3>
+                    <h5>item.description</h5>
                 </div>
             </div>
         </div>
     }
-</div>
+    -->

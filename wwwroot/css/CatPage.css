@@ -4,7 +4,8 @@
     margin: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    display:flex;
+    display: flex;
+    font-family: Montserrat;
 }
 .cat-page-body-img{
     width:30%;
