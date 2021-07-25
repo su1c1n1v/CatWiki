@@ -34,7 +34,7 @@ namespace CatWiki.Controllers
         public async Task<IActionResult>  Breeds()
         {
             List<Cats> cats;
-            cats = await _catRepository.GetAllCats();
+            cats = await _catRepository.GetQuantityOfCats(10);
             return View(cats);
         }
         public async Task<IActionResult> CatPage(string name)

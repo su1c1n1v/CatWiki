@@ -41,7 +41,7 @@ namespace CatWiki.Data.Repository
 
         public async Task<List<Cats>> GetQuantityOfCats(int quantity)
         {
-            getBreeds = "https://api.thecatapi.com/v1/breeds?limit="+quantity+ "&page="+quantity;
+            getBreeds = "https://api.thecatapi.com/v1/breeds";
             var request = new HttpRequestMessage(HttpMethod.Get, getBreeds);
 
             _Client = _clientFactory.CreateClient();
@@ -53,7 +53,7 @@ namespace CatWiki.Data.Repository
             }
 
             cats = await _response.Content.ReadFromJsonAsync<List<Cats>>();
-
+            cats = cats.GetRange(0,quantity);
             return cats;
         }
 
