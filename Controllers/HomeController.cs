@@ -42,7 +42,13 @@ namespace CatWiki.Controllers
             List<Cats> cats;
             cats = await _catRepository.GetCatByName(name);
             ImageViewModel image = await _imageRepository.GetImageById(cats[0].reference_image_id);
-            return View(image);
+            if(image != null)
+            {
+                image.Cats = await _catRepository.GetQuantityOfCats(8);
+                return View(image);
+            }
+            cats = await _catRepository.GetQuantityOfCats(10);
+            return View(cats);
         }
     }
 }

@@ -142,3 +142,22 @@
         </div>
     </div>
 </div>
+<div class="another-cats">
+    <div class="another-cats-title">
+        <h2>Another Cats</h2>
+    </div>
+    <div class="another-cats-galery">
+        @foreach (Cats item in Model.Cats)
+        {
+            @using (Html.BeginForm("CatPage", "Home", FormMethod.Get, new { @class = "another-cat-form" }))
+            {
+                <button type="submit" class="another-cat-grid" style="border: none;">
+                    <div class="grid-img">
+                        <img src="@item.image.url" class="img-cats" alt="@item.name" />
+                    </div>
+                </button>
+                <input type="hidden" name="name" id="name" value="@item.name" />
+            }
+        }
+    </div>
+</div>
