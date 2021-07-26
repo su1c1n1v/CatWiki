@@ -10,67 +10,77 @@
                     <img src="~/img/logocat.png" class="img-logo-cat" alt="Logo" />
                 </div>
                 <h4 class="img-logo-text">Get to know more about your cat breed</h4>
-                <div class="search">
+                <form action="/Home/CatPage" method="get" class="search">
                     <input type="text" name="name" class="search-input" />
                     <button type="submit" class="button">
                         <img src="~/img/magnify.svg" class="img-button" alt="Alternate Text" />
                     </button>
+                </form>
                 </div>
             </div>
-        </div>
-        <div class="img-cat">
-            <!--img-->
-        </div>
-    </div>
-    <div class="baner-content">
-        <div class="baner-title">
-            <h3 class="baner-title-text">Most </h3>
-            <h3 class="baner-title-text2">Searched Breeds</h3>
-        </div>
-        <div class="baner-content-title">
-            <h1 class="baner-content-title-inside">66+ Breeds For you to discover</h1>
-            <div class="baner-content-link">
-                <a href="~/home/Breeds" style="color: #291507;font-weight:bold;">SEE MORE</a>
+            <div class="img-cat">
+                <!--img-->
             </div>
         </div>
-        <div class="galery">
-            @foreach (Cats item in Model)
-            {
-                @using (Html.BeginForm("CatPage", "Home", FormMethod.Get, new { @class = "form"}))
+        <div class="baner-content">
+            <div class="baner-title">
+                <h3 class="baner-title-text">Most </h3>
+                <h3 class="baner-title-text2">Searched Breeds</h3>
+            </div>
+            <div class="baner-content-title">
+                <h1 class="baner-content-title-inside">66+ Breeds For you to discover</h1>
+                <div class="baner-content-link">
+                    <a href="~/home/Breeds" style="color: #291507;font-weight:bold;">SEE MORE</a>
+                </div>
+            </div>
+            <div class="galery">
+                @foreach (Cats item in Model)
                 {
-                    <button type="submit" class="grid" style="border: none; background-color: #E3E1DC;">
-                        <div class="grid-img">
-                            <img src="@item.image.url" class="img-cats" alt="@item.name" />
-                        </div>
-                        <p class="classification">@item.name</p>
-                    </button>
-                    <input type="hidden" name="name" id="name" value="@item.name" />
+                    @using (Html.BeginForm("CatPage", "Home", FormMethod.Get, new { @class = "form" }))
+                    {
+                        <button type="submit" class="grid" style="border: none; background-color: #E3E1DC;">
+                            <div class="grid-img">
+                                <img src="@item.image.url" class="img-cats" alt="@item.name" />
+                            </div>
+                            <p class="classification">@item.name</p>
+                        </button>
+                        <input type="hidden" name="name" id="name" value="@item.name" />
+                    }
                 }
-            }
-        </div>
-    </div>
-    <div class="baner-have-cat">
-        <div class="baner-have-cat-text">
-            <div class="baner-cat-text">
-                <div class="baner-cat-text1">
-                    <h1><span style="border-top:0.3rem solid black;">Why</span> should you have a cat?</h1>
-                </div>
-                <div class="baner-cat-text1">
-                    <h3>
-                        Having a cat around you can actually trigger the release of calming chemicals in your body which lower your stress and anxiety leves
-                    </h3>
-                </div>
-                <div class="baner-cat-text2">
-                    <a href="#">READ MORE</a>
-                </div>
             </div>
         </div>
-        <div class="baner-have-text">
-            <div class="img1">
-                <img src="~/img/image 2.png" class="img2" alt="Cat image 1" />
-                <img src="~/img/image 1.png" class="img3" alt="Cat image 2" />
+        <div class="baner-have-cat">
+            <div class="baner-have-cat-text">
+                <div class="baner-cat-text">
+                    <div class="baner-cat-text1">
+                        <h1><span style="border-top:0.3rem solid black;">Why</span> should you have a cat?</h1>
+                    </div>
+                    <div class="baner-cat-text1">
+                        <h3>
+                            Having a cat around you can actually trigger the release of calming chemicals in your body which lower your stress and anxiety leves
+                        </h3>
+                    </div>
+                    <div class="baner-cat-text2">
+                        <a href="#">READ MORE</a>
+                    </div>
+                </div>
             </div>
-            <img src="~/img/image 3.png" alt="Cat image 3" />
+            <div class="baner-have-text">
+                <div class="img1">
+                    <img src="~/img/image 2.png" class="img2" alt="Cat image 1" />
+                    <img src="~/img/image 1.png" class="img3" alt="Cat image 2" />
+                </div>
+                <img src="~/img/image 3.png" alt="Cat image 3" />
+            </div>
         </div>
     </div>
-</div>
+
+
+    <!--
+                    <div class="search">
+        <input type="text" name="name" class="search-input" />
+        <button type="submit" class="button">
+            <img src="~/img/magnify.svg" class="img-button" alt="Alternate Text" />
+        </button>
+    </div>
+    -->
